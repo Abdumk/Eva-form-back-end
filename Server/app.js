@@ -34,6 +34,9 @@ app.use(
 
 // json middleware to extract json data
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Server is up and running!');
+});
 // user routes middleware 
 app.use("/api/users", useRoutes);
 
