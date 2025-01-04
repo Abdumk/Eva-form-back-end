@@ -11,7 +11,7 @@ const dbconnection = require('./db/dbConfig');
 
 const app = express();
 const cors = require("cors");
-const port = 3004
+const port = process.env.PORT || 5000;
 
 
 // sample to test the server is working
