@@ -5,8 +5,9 @@ require('dotenv').config(); // Ensure dotenv is configured
 const dbconnection = mysql2.createPool({
     user: process.env.USER,
     database: process.env.DATA_BASE,
-    host: "localhost",
+    host: process.env.HOST,
     password: process.env.PASSWORD,
+    port: process.env.PORT,
     connectionLimit: 10,
 });
 
